@@ -10,26 +10,32 @@
   </head>
   <body>
     <main>
-      <div class="to-do">
-        <div class="title">
-          <h2>To-Do Liste</h2>
-          <img src="images/icon.svg" alt="icon" />
+      <div class="container">
+        <div class="buttons">
+          <button class="todoBtn">To-Do</button>
+          <button class="doneBtn">Done</button>
         </div>
-        <h3 id="date"></h3>
-        <div class="input_container">
-          <input
-            type="text"
-            id="input"
-            placeholder="Tilføj en opgave til listen"
-          />
-          <button>Tilføj</button>
+        <div class="to-do">
+          <div class="title">
+            <h2>To-Do Liste</h2>
+            <img src="images/icon.svg" alt="icon" />
+          </div>
+          <h3 id="date"></h3>
+          <div class="input_container">
+            <input
+              type="text"
+              id="input"
+              placeholder="Tilføj en opgave til listen"
+            />
+            <button id="btn">Tilføj</button>
+          </div>
+          <ul id="list_container"></ul>
         </div>
-        <ul id="list_container"></ul>
-      </div>
-      <div class="done hidden">
-        <h2>Færdige opgaver</h2>
-        <h3>Flyt opgaven tilbage til To-Do ved at klikke på den</h3>
-        <ul id="done_container"></ul>
+        <div class="done hidden">
+          <h2>Færdige opgaver</h2>
+          <h3>Flyt opgaven tilbage til To-Do ved at klikke på den</h3>
+          <ul id="done_container"></ul>
+        </div>
       </div>
     </main>
   </body>

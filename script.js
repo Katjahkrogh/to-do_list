@@ -1,17 +1,19 @@
+window.addEventListener("load", displayDate);
+
 // Hent DOM-elementer ved hjælp af querySelector
 const input = document.querySelector("#input"); // Inputfelt
 const list = document.querySelector("#list_container"); // Henter den tomme list container
-const addButton = document.querySelector("button"); // Knappen til at tilføje opgaver
+const btn = document.querySelector("#btn"); // Knappen til at tilføje opgaver
 const done = document.querySelector("#done_container"); // Henter den tomme done container
 
 // Tilknyt en eventlistener til knappen for at tilføje en opgave
-addButton.addEventListener("click", addTask);
+btn.addEventListener("click", addTask);
+document.querySelector(".doneBtn").addEventListener("click", showDoneList);
+document.querySelector(".todoBtn").addEventListener("click", showToDoList);
 
 // Tilknyt en eventlistener til opgavelisten for at markere eller fjerne opgaver
 list.addEventListener("click", taskDone);
 done.addEventListener("click", taskDone);
-
-window.addEventListener("load", displayDate);
 
 // Generere dato
 function displayDate() {
@@ -19,6 +21,9 @@ function displayDate() {
   date = date.toString().split(" ");
   document.querySelector("#date").textContent =
     date[2] + ". " + date[1] + " " + date[3];
+
+  document.querySelector(".todoBtn").classList.add("activeBtn");
+  document.querySelector(".doneBtn").classList.add("inActiveBtn");
 }
 
 // Funktion til at oprette et nyt listeelement med en given tekst
@@ -90,3 +95,21 @@ function showData() {
 
 // Kalder funktionen showdata
 showData();
+
+function showDoneList() {
+  document.querySelector(".done").classList.remove("hidden");
+  document.querySelector(".to-do").classList.add("hidden");
+
+  document.querySelector(".todoBtn").classList.remove("activeBtn");
+  document.querySelector(".doneBtn").classList.add("activeBtn");
+  document.querySelector(".todoBtn").classList.add("inActiveBtn");
+}
+
+function showToDoList() {
+  document.querySelector(".to-do").classList.remove("hidden");
+  document.querySelector(".done").classList.add("hidden");
+
+  document.querySelector(".doneBtn").classList.remove("activeBtn");
+  document.querySelector(".todoBtn").classList.add("activeBtn");
+  document.querySelector(".todoBtn").classList.add("inActiveBtn");
+}
