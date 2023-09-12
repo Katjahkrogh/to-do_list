@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js"></script>
+    <title>To-Do Liste</title>
+  </head>
+  <body>
+    <main>
+      <div class="to-do">
+        <div class="title">
+          <h2>To-Do Liste</h2>
+          <img src="images/icon.svg" alt="icon" />
+        </div>
+        <h3 id="date"></h3>
+        <div class="input_container">
+          <input
+            type="text"
+            id="input"
+            placeholder="Tilføj en opgave til listen"
+          />
+          <button>Tilføj</button>
+        </div>
+        <ul id="list_container"></ul>
+      </div>
+      <div class="done hidden">
+        <h2>Færdige opgaver</h2>
+        <h3>Flyt opgaven tilbage til To-Do ved at klikke på den</h3>
+        <ul id="done_container"></ul>
+      </div>
+    </main>
+  </body>
+</html>
