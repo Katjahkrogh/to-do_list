@@ -52,14 +52,14 @@ function taskDone(evt) {
     target.classList.toggle("checked"); // Tilføj eller fjern klassen "checked" for at markere eller afmarkere opgaven
     saveData();
 
-    // Flytter checked li til done listen
+    // Flytter checked li til done listen med påsat timer
     if (target.classList.contains("checked")) {
       setTimeout(() => {
         done.appendChild(target);
       }, 300);
       saveData();
     } else {
-      // Flytter li elementet tilbage, hvis check fjernes
+      // Flytter li elementet tilbage, hvis check fjernes med påsat timer
       setTimeout(() => {
         list.appendChild(target);
       }, 300);
