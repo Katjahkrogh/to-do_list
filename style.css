@@ -29,7 +29,18 @@ main {
   padding: 50px 20px 50px;
   border-radius: 20px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+}
+
+.done h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.done h3 {
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: grey;
+  margin-bottom: 10px;
 }
 
 .hidden {
@@ -49,18 +60,6 @@ main {
   margin-bottom: 20px;
   font-size: 15px;
   color: grey;
-}
-
-h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-h3 {
-  margin-bottom: 20px;
-  font-size: 15px;
-  color: grey;
-  margin-bottom: 10px;
 }
 
 .input_container {
@@ -156,9 +155,9 @@ span:hover {
 }
 
 .inActiveBtn:hover {
-  background-color: #050591e4;
+  background-color: royalblue;
 }
 
 .activeBtn {
-  background-color: #050591e4;
+  background-color: royalblue;
 }
