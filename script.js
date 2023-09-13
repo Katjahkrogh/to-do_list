@@ -41,7 +41,7 @@ function createListItem(taskText) {
 // Funktion til at tilføje en opgave til listen
 function addTask() {
   if (input.value === "") {
-    alert("You must write a task"); // Vis en advarsel, hvis inputfeltet er tomt
+    alert("Du skal skrive en opgave"); // Vis en advarsel, hvis inputfeltet er tomt
   } else {
     const li = createListItem(input.value); // Opret et nyt <li> element med inputteksten
     list.appendChild(li); // Tilføj <li> elementet til opgavelisten
