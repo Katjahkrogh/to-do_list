@@ -89,21 +89,6 @@ function taskDone(evt) {
   }
 }
 
-// Funktion der gemmer de skrevne tasks lokalt på brugerens computer
-function saveData() {
-  localStorage.setItem("data", list.innerHTML);
-  localStorage.setItem("data-done", done.innerHTML);
-}
-
-// Funktion der viser det gemte data, når browseren reloader eller linket åbnes på ny
-function showData() {
-  list.innerHTML = localStorage.getItem("data");
-  done.innerHTML = localStorage.getItem("data-done");
-}
-
-// Kalder funktionen showdata
-showData();
-
 function showDoneList() {
   document.querySelector(".done").classList.remove("hidden");
   document.querySelector(".to-do").classList.add("hidden");
@@ -121,3 +106,19 @@ function showToDoList() {
   document.querySelector(".todoBtn").classList.add("activeBtn");
   document.querySelector(".todoBtn").classList.add("inActiveBtn");
 }
+
+// Funktion der gemmer de skrevne tasks lokalt på brugerens computer
+function saveData() {
+  localStorage.setItem("data", list.innerHTML);
+  localStorage.setItem("data-done", done.innerHTML);
+}
+
+// Funktion der viser det gemte data, når browseren reloader eller linket åbnes på ny
+function showData() {
+  list.innerHTML = localStorage.getItem("data");
+  done.innerHTML = localStorage.getItem("data-done");
+}
+
+// Kalder funktionen showdata
+showData();
+
