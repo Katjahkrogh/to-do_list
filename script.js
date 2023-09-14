@@ -8,6 +8,7 @@ const done = document.querySelector("#done_container"); // Henter den tomme done
 
 // Tilknyt en eventlistener til knappen for at tilføje en opgave
 btn.addEventListener("click", addTask);
+input.addEventListener("keypress", enterTask);
 document.querySelector(".doneBtn").addEventListener("click", showDoneList);
 document.querySelector(".todoBtn").addEventListener("click", showToDoList);
 
@@ -24,6 +25,13 @@ function displayDate() {
 
   document.querySelector(".todoBtn").classList.add("activeBtn");
   document.querySelector(".doneBtn").classList.add("inActiveBtn");
+}
+
+// Funktion der sørger for at brugeren kan benytte "enter" til at indsætte en opgave
+function enterTask(evt) {
+  if (evt.keyCode === 13) {
+    addTask();
+  }
 }
 
 // Funktion til at oprette et nyt listeelement med en given tekst
